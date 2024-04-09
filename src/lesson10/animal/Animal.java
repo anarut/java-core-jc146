@@ -9,6 +9,7 @@ public abstract class Animal { // extends Object {
 //        super();
         this.name = name;
         this.age = age;
+
     }
 
     public abstract void say();

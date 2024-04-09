@@ -1,9 +1,21 @@
 package lesson10.animal;
 
+import java.util.Random;
+
 public class Monkey extends WildAnimal {
     public Monkey(String name, int age) {
         super(name, age);
     }
+
+    public Monkey(String name) {
+        this(name, new Random().nextInt(3, 9));
+
+        this.say();
+
+        this.eat();
+        super.eat();
+    }
+
 
     @Override
     public void say() {
