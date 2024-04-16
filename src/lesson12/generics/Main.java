@@ -20,7 +20,10 @@ public class Main {
 
         var bigDecimalAccount = new BigDecimalAccount("Rembo IV", new BigDecimal("3333.5524763"));
 
-        GenericAccount<Integer, BigDecimal> genericAccount1 = new GenericAccount<>("Rembo IV", 66);
+        GenericAccount<Integer, BigDecimal> genericAccount1 = new GenericAccount<Integer, BigDecimal>("Rembo IV", 66);
+        Number balance1 = genericAccount1.getBalance();
+        Integer balance2 = genericAccount1.getBalance();
+        String fullName = genericAccount1.getFullName();
 //        GenericAccount<String> genericAccount2 = new GenericAccount<>("Rembo IV", "6masjhkasjhk6");
         GenericAccount<Double, Byte> genericAccount3 = new GenericAccount<>("Rembo IV", 66.3);
 //        GenericAccount<ClassA> genericAccount4 = new GenericAccount<>("Rembo IV", new ClassA());
