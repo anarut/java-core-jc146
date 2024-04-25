@@ -23,7 +23,8 @@ public class PointTreeSet {
         System.out.println(point6);
         System.out.println(point7);
 
-        Set<Point> pointSet = new TreeSet<>(new PointComparator());
+        PointComparator pointComparator = new PointComparator();
+        Set<Point> pointSet = new TreeSet<>(pointComparator);
         pointSet.add(point1);
         pointSet.add(point2);
         pointSet.add(point3);
@@ -32,6 +33,11 @@ public class PointTreeSet {
         pointSet.add(point6);
         pointSet.add(point7);
         System.out.println(pointSet);
+
+
+        int i = point1.compareTo(point2);
+        int compare = pointComparator.compare(point1, point2);
+
 
     }
 }
