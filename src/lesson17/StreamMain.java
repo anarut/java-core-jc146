@@ -1,5 +1,6 @@
 package lesson17;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -33,6 +34,15 @@ public class StreamMain {
         }
     }
 
+    public static void readSomeInfoIntoFile() {
+        try (FileInputStream fos = new FileInputStream("super-contacts.txt")) {
+            byte[] bytes = fos.readAllBytes();
+            String s = new String(bytes);
+            System.out.println(s);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public static void writeSomeInfoIntoFile2() {
         try (FileOutputStream fos = new FileOutputStream("super-contacts.txt")) {
