@@ -7,7 +7,7 @@ public class Main {
 
     @FunctionalInterface
     public interface Operation {
-        int operate(int a, int b);
+        int operate(int x, int y);
 
 //        int operate(int a, int b, int c);
     }
@@ -23,12 +23,12 @@ public class Main {
 //        };
 
 //        Operation sumOperation1 = (a, b) -> {
-//            System.out.println(a);
-//            System.out.println(b);
+////            System.out.println(a);
+////            System.out.println(b);
 //            return a + b;
 //        };
 
-//        Operation sumOperation = (a, b) -> a + b;
+//        Operation sumOperation2 = (a, b) -> a + b;
 
         Operation sumOperation = Integer::sum;
 
