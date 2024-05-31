@@ -31,9 +31,13 @@ public class SomeCount {
             }
         };
 
-        for (int i = 0; i < 3; i++) {
-            new Thread(runnable).start();
-        }
+        new Thread(runnable).start();
+        Thread thread = new Thread(runnable);
+        thread.start();
+        new Thread(runnable).start();
+
+        Thread.sleep(50);
+        thread.interrupt();
 
 
         Thread.sleep(3000);
